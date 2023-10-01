@@ -19,8 +19,6 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     /**
      * Ventana de ingreso
      */
-    
-    
     VentanaIngreso vIn;
     
     
@@ -138,12 +136,15 @@ public class VentanaPrincipal extends javax.swing.JFrame {
      * @param evt Evento recibido
      */
     private void btnIngresaCantidadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIngresaCantidadActionPerformed
+        //crea la ventana de ingreso si aun no ha sido creada
         if (this.vIn==null)
-        this.vIn = new VentanaIngreso(this, true);
+            this.vIn = new VentanaIngreso(this, true);
+        //configuracion inicial de la venta 
         this.lbOutEuros.setText("");
         this.lbOutPts.setText("");
         this.lbEstado.setText("");
         this.vIn.setLocationRelativeTo(this);
+        //visualizacion de la ventana
         this.vIn.setVisible(true);
     }//GEN-LAST:event_btnIngresaCantidadActionPerformed
 

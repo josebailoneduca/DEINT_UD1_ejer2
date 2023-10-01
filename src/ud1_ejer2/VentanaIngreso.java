@@ -99,7 +99,12 @@ public class VentanaIngreso extends javax.swing.JDialog {
         // TODO add your handling code here:
     }//GEN-LAST:event_inputEurosActionPerformed
 
+    /**
+     * Accion ejecutada al pulsar el boton convertir
+     * @param evt  Evento de pulsado
+     */
     private void btnConvertirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConvertirActionPerformed
+        //llama a la pantalla principal enviando el importe introducido
         this.vPrin.convertir(this.inputEuros.getText());
     }//GEN-LAST:event_btnConvertirActionPerformed
 
