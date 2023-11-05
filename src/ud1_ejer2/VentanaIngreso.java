@@ -8,7 +8,7 @@ Lista de paquetes:
 package ud1_ejer2;
 
 /**
- *
+ * Ventana para introducior el valor en euros a convertir a pesetas
  * @author Jose Javier Bailon Ortiz
  */
 public class VentanaIngreso extends javax.swing.JDialog {
@@ -17,7 +17,7 @@ public class VentanaIngreso extends javax.swing.JDialog {
      * Atributos
      */
     /**
-     * Ventana padre
+     * Referencia a la ventana padre
      */
     private VentanaPrincipal vPrin;
     

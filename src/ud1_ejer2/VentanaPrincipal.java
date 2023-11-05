@@ -17,14 +17,14 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
     //ATRIBUTOS DE CLASE
     /**
-     * Ventana de ingreso
+     * Referencia a la ventana de ingreso
      */
     VentanaIngreso vIn;
     
     
     
     /**
-     * Creates new form Ejer2VentanaPrincipal
+     * Constructor
      */
     public VentanaPrincipal() {
         initComponents();
@@ -136,13 +136,14 @@ public class VentanaPrincipal extends javax.swing.JFrame {
      * @param evt Evento recibido
      */
     private void btnIngresaCantidadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIngresaCantidadActionPerformed
-        //crea la ventana de ingreso si aun no ha sido creada
-        if (this.vIn==null)
-            this.vIn = new VentanaIngreso(this, true);
-        //configuracion inicial de la venta 
+        //limpiar etiquetas de la ventana
         this.lbOutEuros.setText("");
         this.lbOutPts.setText("");
         this.lbEstado.setText("");
+        
+        //crea la ventana de ingreso si aun no ha sido creada
+        if (this.vIn==null)
+            this.vIn = new VentanaIngreso(this, true);
         this.vIn.setLocationRelativeTo(this);
         //visualizacion de la ventana
         this.vIn.setVisible(true);
@@ -155,7 +156,9 @@ public class VentanaPrincipal extends javax.swing.JFrame {
      * @param euros Euros a convertir
      */
     public void convertir(String textoEuros){
+        //ocultar la ventana de ingreso
         this.vIn.setVisible(false);
+        
         try {
             // conversion
             double euros = Double.parseDouble(textoEuros);
